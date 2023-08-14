@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy club</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-wrapper">
+    <form>
+      <legend>
+        <h2>Formulaire d'inscription</h2>
+      </legend>
+      <fieldset>
+        <legend>
+          Information personnelle
+        </legend>
+        <p><small>
+          <i>Renseigner ces information pour nous aidez à vous connaitre.</i><br>
+          Vous trouverez rapidement des amis partagent votre passion du jeu de societé.
+        </small></p>
+
+        <div class="form-group">
+          <label for="civilite">Civilité</label>
+          <select name="civilite" id="civilite" required autofocus >
+            <option value="">Sélectionez un titre</option>
+            <option value="Madame">Madame</option>
+            <option value="Mademoiselle">Mademoiselle</option>
+            <option value="Monsiueur">Monsiueur</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="firstName">Votre nom</label>
+          <input type="text" name="firstName" id="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Votre prénom</label>
+          <input type="text" name="lastName" id="lastName">
+        </div>
+        <div class="form-group">
+          <label for="birthDate">Votre date de naissance</label>
+          <input type="date" name="birthDate" id="birthDate">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Information de contact
+        </legend>
+        <p><small>
+          <i>Renseigner ces information pour nous permettre de vous contacter.</i><br>
+          Ces informations nous permet de vous inviter à nos évènements.
+        </small></p>
+        <div class="form-group">
+          <label for="phoneNumber">Votre téléphone</label>
+          <input type="phone" name="phoneNumber" id="phoneNumber">
+        </div>
+        <div class="form-group">
+          <label for="zip">Votre code postal</label>
+          <input type="text" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" name="zip" id="zip">
+        </div>
+        <div class="form-group">
+          <label for="town">Votre ville</label>
+          <input type="text" name="town" id="town" readonly>
+        </div>
+        <div class="form-group">
+          <label for="address">Votre adresse</label>
+          <textarea name="address" id="address" rows="4"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Informations complémentaire
+        </legend>
+        <p><small>
+          <i>Répondez à ces questions pour nous permettre de mieux vous connaitre.</i><br>
+          Ces informations nous permes d'amélioré votre exprérience
+        </small></p>
+        <div class="form-group">
+          <label for="preferedGames">Quel sont vos jeux préférées ?</label>
+          <select name="preferedGames" id="preferedGames" multiple>
+            <option value="1">Tarot</option>
+            <option value="2">Échecs</option>
+            <option value="3">Dames</option>
+            <option value="4">Bataille navale</option>
+            <option value="5">Petits-chevaux</option>
+            <option value="6">Poker</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="godFather">Qui pattainne votre inscription ?</label>
+          <select name="godFather" id="godFather" required >
+            <option value=""><span class="center">Indiquez votre parrain </span></option>
+            <option value="1">Laure</option>
+            <option value="2">Adam</option>
+            <option value="3">Chloé</option>
+            <option value="4">Jules</option>
+            <option value="5">Camille</option>
+            <option value="6">Raphaël</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset disabled>
+        <legend>
+          Informations de connexion
+        </legend>
+        <div class="form-group">
+          <label for="email">Votre adresse e-mail</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Votre mot de passe</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label class="inline-label" for="subscibeNews">
+            <input type="checkbox" name="subscibeNews" id="subscibeNews" required> 
+            Souhaitez-vous recevoir nos news ?
+          </label>
+        </div>
+        <div class="form-group">
+           <label class="inline-label" for="acceptCGU"> 
+             <input type="checkbox" name="acceptCGU" id="acceptCGU" required> 
+              Accepter les <a href="#">conditions générales</a>
+            </label>
+        </div>
+        <div class="form-group">
+          <button type="reset">Annuler l'inscription</button>
+          <button type="submit">Valider mon inscription</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
